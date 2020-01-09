@@ -1,4 +1,4 @@
-# docker files for prom and grafana 
+# docker files for server and docker container monitoring
 
 docker and cofig files and releated directories.
 
@@ -6,9 +6,11 @@ docker and cofig files and releated directories.
 
 ## prepare docker-compose
 
-https://docs.docker.com/compose/install/
+https://docs.docker.com/compose/install/   
 
 ## prepare docker images
+
+if didnt prepare, it will do automaticaly when docker-compose up  
 
 ```
 $ docker pull prom/prometheus:v2.15.2 
