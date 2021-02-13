@@ -1,3 +1,4 @@
 grafana/grafana-data/*
 grafana/log/*
+prom/conf/prometheus.yml
 prom/prometheus-data/*

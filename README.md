@@ -36,6 +36,13 @@ $ docker-compose up -d --build
 
 ```
 
+### prometheus が起動しない場合
+
+以下のディレクトリ/ファイルの権限を 777 にする  
+prom/conf  
+prom/prometheus-data/  
+
+
 ### access and use
 
 ブラウザで `http://<IPaddress>:3000` → grafana へアクセス、 admin/admin でログインできることを確認  
@@ -56,13 +63,3 @@ $ docker-compose up -d --build
 promethes, grafana のステートフルなデータは、attach された voluem に永続化されるので、
 コンテナ作り直してそのまま閲覧できる（もちろん、アプリケーション側でのバージョン変更による互換性の維持は必要）
 
-# Todo
-
-* 監視対象のアプリケーション用コンテナイメージの中に node_exporter、および必要な exporter を用意
-  * node_exporter はいらんかな
-  * それらを監視できるように、 prometheus.yml の調整
-
-* grafana.ini の調整
-  * Listenポートを443へ変更
-  * https 化、SSL証明書（独自証明書？正規（LetsEncryptなど）とる？）
-  * DNSについて確認
