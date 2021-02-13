@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: prom/Dockerfile
-    image: mollinaca/prometheus:v2.15.2
+    image: prom/prometheus:v2.24.1
     container_name: prometheus
     network_mode: bridge
     tty: true
@@ -20,7 +20,7 @@ services:
     build:
       context: .
       dockerfile: grafana/Dockerfile
-    image: mollinaca/grafana:6.5.2
+    image: grafana/grafana:7.4.1
     container_name: grafana
     network_mode: bridge
     tty: true
@@ -36,7 +36,7 @@ services:
     build:
       context: .
       dockerfile: node_exporter/Dockerfile
-    image: mollinaca/node_exporter:v0.18.1
+    image: carlosedp/node_exporter:v0.17.0
     container_name: node_exporter
     network_mode: bridge
     tty: true
@@ -48,7 +48,7 @@ services:
     build:
       context: .
       dockerfile: cadvisor/Dockerfile
-    image: mollinaca/cadvisor:v0.35.0
+    image: google/cadvisor:v0.33.0
     container_name: cadvisor
     network_mode: bridge
     tty: true
