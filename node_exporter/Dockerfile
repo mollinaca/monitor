@@ -1,4 +1,4 @@
-FROM docker.io/prom/node-exporter:v0.18.1 
+FROM docker.io/prom/node-exporter:v0.17.0
 USER root
 
 ENV TZ JST-9

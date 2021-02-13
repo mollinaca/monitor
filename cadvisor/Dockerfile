@@ -1,4 +1,4 @@
-FROM gcr.io/google-containers/cadvisor:v0.35.0 
+FROM gcr.io/google-containers/cadvisor:v0.33.0
 USER root
 
 ENV TZ JST-9
