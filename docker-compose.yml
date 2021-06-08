@@ -20,7 +20,7 @@ services:
     build:
       context: .
       dockerfile: grafana/Dockerfile
-    image: grafana/grafana:7.4.1
+    image: grafana/grafana:8.0.0
     container_name: grafana
     network_mode: bridge
     tty: true
